@@ -1,0 +1,22 @@
+{
+    "Produtos": [
+        {
+            "nome": "Produto a",
+            "preco": "10",
+            "descricao": "Bom demais",
+            "categoria": "Seilá"
+        },
+        {
+            "nome": "Produto b",
+            "preco": "15",
+            "descricao": "Bom gosto",
+            "categoria": "nada ver"
+        },
+        {
+            "nome": "Produto b",
+            "preco": "25",
+            "descricao": "ruim demais",
+            "categoria": "lixo"
+        }
+    ]
+}
