@@ -1,1 +1,4 @@
-Voce acessou a pagina
+[2025-03-13T01:24:24.582Z]: GET /products/2 
+[2025-03-13T01:24:24.956Z]: GET /products/1 
+[2025-03-13T01:29:50.324Z]: GET /users/90 
+[2025-03-13T01:30:47.029Z]: GET /users/100 

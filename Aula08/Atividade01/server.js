@@ -1,17 +1,34 @@
 const express = require('express')
 const app = express()
-app.use(express.json())
-app.use(express.urlencoded({extended: true}))
 const rotasUsuarios = require('./rotasUsuarios')
 const rotasProdutos = require('./rotasProdutos')
 const rotasCadastro = require('./rotasCadastro')
 const rotasAdmin = require('./rotasAdmin')
-const port = 3333
+const port = 3000
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+
+
+
+
 
 const logger = (req, res, next) =>{
     const data = new Date();
+    const fs = require('fs')
+
+    
     console.log(`[${data.toISOString()}]: ${req.method} ${req.url}`)
-    next()
+    
+
+const conteudo =`[${data.toISOString()}]: ${req.method} ${req.url} \n`
+     fs.appendFile('arquivo.txt', conteudo,  err=>{
+    if(err)throw err;
+    
+})
+   
+
+
+next()
 }
     
 
@@ -36,5 +53,5 @@ app.get('/', (req, res) =>{
 // })
 
 app.listen(port, () =>{
-    console.log(`Servidor rodando no https://localhost:${port}`)
+    console.log(`Servidor rodando no http://localhost:${port}`)
 })
